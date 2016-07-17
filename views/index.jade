@@ -1,0 +1,17 @@
+doctype html
+
+html
+  head
+    script(src='/lib/jquery.min.js')
+    script(src='/lib/angular.js')
+    script(src='/lib/angular-ui-router.min.js')
+    script(src='/all.js')
+    link(rel='stylesheet' href='/lib/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+    
+  body(ng-app="Wordly")
+    h1 Wordrly
+    p {{100+2}}
+    div(ui-view)
+
+    
