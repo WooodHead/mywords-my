@@ -6,10 +6,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-
-var wordListController=require('./wordListController.js');
-router.post('/list', wordListController.getList);
-router.get('/save', wordListController.saveList);
-//router.use('/api/lookups', lookupRouter);
-
 module.exports = router;
