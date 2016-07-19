@@ -1,3 +1,14 @@
 
+<hr>
+<p>Lookups partial</p>
+
+<form ng-submit="queryWord()">
 <input type='text' ng-model='targetWord'>
 <button>Search </button>
+</form>
+
+<ul>
+<li ng-repeat="word in currentList">
+<p>{{word}}</p>
+</li>
+</ul>
