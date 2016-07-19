@@ -1,5 +1,36 @@
-extends layout
+doctype html
 
-block content
-  h1= title
-  p Welcome to #{title}
+html
+  head
+    script(src='/lib/jquery.js')
+    script(src='/lib/angular.js')
+    script(src='/lib/angular-ui-router.js')
+    script(src='/all.js')
+    link(rel='stylesheet' href='/lib/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+    
+  body(ng-app="myWord" ng-controller="MainCtrl")
+    h1 Wordrly
+    p {{100+2}}
+    div(ui-view)
+    
+    form(ng-submit="queryWord()")
+      input(type='text' ng-model='targetWord')
+      button(type='submit') Go!
+      
+    h3 Definition
+    p {{wordDefinition}}
+    
+    hr
+    h3 Same Context
+    ul(ng-repeat="word in sameContext")
+      li {{word}}
+      
+    hr
+    h3 Etymology
+    p {{wordEtymology}}
+    
+    hr
+    h3 Lookup History
+    p {{lookupList}}
+    
